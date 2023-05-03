@@ -3,6 +3,10 @@ const router = express.Router();
 const User = require('../models/User')
 const Schema = require('mongoose')
 const {  validationResult,body } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'ajmeerhere';
+
 
 
 //createing a validating varibles for input for name:,
@@ -28,14 +32,24 @@ router.post('/createuser',[validateName,validateEmail,validateStrongPassword],as
  let user = await User.findOne({email:req.body.email});
  if(user)
      {return res.status(400).json({error:'Sorry Email already exists'})}
- 
+var salt = await bcrypt.genSaltSync(10);
+const secPass = await bcrypt.hash(req.body.password,salt);
+
+ //create a New User
  user = await User.create({
     name:req.body.name,
-    password:req.body.password,
+    password:secPass,
     email:req.body.email
- })
+ });
+ const data = {
+    user:{
+        id:user.id
+    }
+ }
+ const AuthToken = jwt.sign(data,JWT_SECRET);
+ 
 //  .then(user=>res.json(user)).catch(err=>console.log(err))
-res.json({"Stutus":"sucess"})}
+res.json({AuthToken})}
 catch(error){
     console.error(error.message);
     
