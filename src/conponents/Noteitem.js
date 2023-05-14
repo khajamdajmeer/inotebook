@@ -11,7 +11,7 @@ const Noteitem = (props) => {
       <div className="col-md-3 mt-4"  >
         <div className="card " style={{height:"150px"}}>
           <div className="card-body " style={{ paddingTop:"2px"}}>
-            <p className="card-title"> <strong>Title: </strong>   {note.Title}</p>
+            <div className="card-title"> <strong>Title: </strong>   {note.Title}</div>
             <p className="card-subtitle mb-2 text-body-secondary"><strong>Tag: </strong>{note.tag}</p>
             <p className="card-text">{note.Discription}</p>
             <p className="card-text">Created on {trimdate}</p>
