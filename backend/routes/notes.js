@@ -30,7 +30,9 @@ router.post('/addnote', fetchUser, [body('Title', 'enter a Title').isLength({ mi
         Title, Description, tag, user: req.user.id
     })
     const savedNote = await notes.save();
-    res.json(savedNote)}
+    res.json(savedNote)
+    
+}
     catch (error) {
         console.error(error.message);
         res.status(500).send('Internal error Occoured')

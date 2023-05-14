@@ -38,10 +38,10 @@ const inputfield = document.querySelectorAll("input")
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Tag</label>
-                    <input type="text" className="form-control" id="tag" value={note.tag} name='tag' onChange={onChange}/>
+                    <input type="text" className="form-control" id="tag" value={note.tag} name='tag' onChange={onChange} required/>
                 </div>
                 {adrt &&<h5 style={{color:'green'}}>New Note Created</h5>}
-                <button disabled={note.Title.length<5||note.Description.length<5} type="submit" className="btn btn-primary" onClick={handleNoteSubmit}>Add Note</button>
+                <button disabled={note.Title.length<5||note.Description.length<5||note.tag.length<3} type="submit" className="btn btn-primary" onClick={handleNoteSubmit}>Add Note</button>
             </form>
             </div>
         </>
