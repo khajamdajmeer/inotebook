@@ -128,7 +128,9 @@ padding-left: 5px;
 }
 #addbtn:hover{
 color: grey;
-border: 2px solid red;
+
+
+
 }
 
 @media only screen and (max-width:400px) {
