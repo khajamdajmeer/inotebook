@@ -30,7 +30,7 @@ const host = 'http://localhost:5000'
   //Add a Note
   const addNote = async(Title, Description, tag) => {
     //API call
-    await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${host}/api/notes/addnote`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
 
       headers: {

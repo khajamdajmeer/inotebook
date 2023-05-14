@@ -9,21 +9,25 @@ const Navbar = (props ) => {
 
   const callhome = useRef(null)
   const [loginvalid,setLoginvalid] = useState(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(()=>{
+
    if(localStorage.getItem('token')){
  setLoginvalid(true);
    }
    else{
     setLoginvalid(false);
    }
-  },[])
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  })
   const handlelogout = ()=>{
     localStorage.clear();
     setLoginvalid(false)
   }
   return (
     <>
-  <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark"  data-bs-theme="dark">
+  <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark sticky-top"  data-bs-theme="dark">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/home">My NoteBook</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
