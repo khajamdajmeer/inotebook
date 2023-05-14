@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.textarea {
+    font-family: sans-serif;
+    font-size: 16px;
+    min-height: 50px;
+    max-height: 200px;
+    overflow: auto;
+    resize: none;
   }
+  .sticky {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 57px;
+    border-radius: 50%;
+  }
+  .myaddbutton{
+    height: 40px;
+    width: 40px;
+  }
+  .fa-2xla {
+    font-size: 5em;
+    line-height: .03125em;
+    vertical-align: -0.1875em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* login page css here */
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+#box-left{
+  background-color: black;
+  opacity: 0.3;
+}
+.middlebox{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+#parent{
+  /* position: relative;
+    top: -41px; */
+  display: flex ;
+  height: 94vh;
+background-image: linear-gradient(to right,#045a85,#2560ae,#219ebc,#2d4c8f);
+
+}
+.box{
+
+  display: inline;
+ width:  400px;
+  margin: auto;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 12px 20px;
+
+}
+.box h2{
+  
+}
+.text-element{
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0px;
+  /* width: 80%; */
+}
+.input{
+width: 100%;
+height: 40px;
+margin-top: 4px;
+border-radius: 3px;
+border: none;
+padding-left: 5px;
+}
+#signup{
+  display:block;
+  text-align: end;
+}
+.link-tag{
+  text-decoration: none;
+  font-weight: bold;
+  color: #6f1d1b;
+}
+.link-tag:hover{
+  color: antiquewhite;
+  background-color: transparent;
+  box-shadow: 0 0 5px antiquewhite ,
+  0 0 25px antiquewhite ,
+  0 0 50px antiquewhite 
+  ,0 0 100px antiquewhite ;
+
+}
+.text{
+  font-size: 16px;
+}
+.btn1{
+  margin-top: 9px;
+  height: 30px;
+  cursor: pointer;
+  /* background-color: aquamarine; */
+  color: #353535;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  width: 100%;
+  
+}
+.btn1:hover{
+  background: #e7c6ff;
   color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #e7c6ff ,
+  0 0 25px #e7c6ff ,
+  0 0 50px #e7c6ff 
+  ,0 0 100px #e7c6ff ;
+}
+#addbtn:hover{
+color: grey;
+border: 2px solid red;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width:400px) {
+  .box{
+    width:320px;
+    padding-top: 0px;
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userbtnli{
+text-align: center;
 }
