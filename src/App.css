@@ -119,7 +119,7 @@ padding-left: 5px;
 }
 .btn1:hover{
   background: #e7c6ff;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: 0 0 5px #e7c6ff ,
   0 0 25px #e7c6ff ,
