@@ -141,7 +141,7 @@ const history = useNavigate();
         return <Noteitem key={note._id} updateNote={updateNote} note={note} viewNote = {viewnote}/>
       })}
     </div>
-  <Link title='Click to add New Note' className="sticky" to='/addnote'> <i style={{color:'black'}} id='addbtn'  className="fa-solid fa-circle-plus fa-2xla"></i></Link>
+  <Link title='Click to add New Note' className="sticky" to='/addnote'> <i style={{color:'black'}} className="fa-solid fa-circle-plus fa-2xla addbtnstyle" id='addbtn'></i></Link>
  
   </>
 
