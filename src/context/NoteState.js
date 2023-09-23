@@ -3,7 +3,7 @@ import noteContext from "./NoteContext";
 // import Alert from "../conponents/Alert";
 
 const NoteState = (props) => {
-const host = 'http://localhost:5000'
+const host = 'http://localhost:5001'
   const notesinital = []
   const[notes,setNotes]=useState(notesinital)
   const exsee = {

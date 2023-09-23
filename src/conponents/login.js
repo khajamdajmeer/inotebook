@@ -27,9 +27,7 @@ let history = useNavigate();
 rt = await UserAuth(Credentials.email,Credentials.password);
 console.log(rt)
 if(rt){
-  // props.showAlert('Login Success','success')
   history('/home')
-  // console.log('open home')
 }
 else{
   // props.showAlert('invalid Credentials','danger')
@@ -51,7 +49,7 @@ else{
           <div className='middlebox'>
             <div className='box'>
               <h2>Sign In</h2>
-              <label className='text-element'>Email</label>
+              <h3 className='text-element'>Email</h3>
               <input
                 placeholder='Enter an email'
                 type='email'

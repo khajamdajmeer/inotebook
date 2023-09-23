@@ -14,7 +14,7 @@ const fetchuser = require('../middleware/fetchUser')
 // const validateStrongPassword = body("password", 'password must be of 8 character with a symbol ,number & a Capital letter').isString().isLength({ min: 8 })
 //     .not().isLowercase().not().isUppercase()
 //     .not().isNumeric().not().isAlpha();
-const validateStrongPassword = body("password", 'password must be of 8 character with a symbol ,number & a Capital letter').isString().isLength({min:5});
+const validateStrongPassword = body("password", 'password must be of 8 character with a symbol ,number & a Capital letter').isString().isLength({min:4});
 const validateName = body('name', 'enter a valid Name').isLength({ min: 3, max: 15 });
 const validateEmail = body('email', 'enter a valid Email').isEmail();
 
